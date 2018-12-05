@@ -61,13 +61,17 @@ document.querySelector('.btn-roll').addEventListener('click',function () {
             // document.querySelector('.player-1-panel').classList.add('active');
 
             document.querySelector('.dice').style.display = 'none' ; 
-
-
-
-
-
-    }
+}
     
+});
+
+
+document.querySelector('.btn-hold').addEventListener('click',function() {
+
+    scores [activePlayer] += roundScore ; 
+
+    document.getElementById('score-'+ activePlayer).textContent = scores[activePlayer];
+
 
 });
 
