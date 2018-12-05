@@ -59,7 +59,19 @@ document.querySelector('.btn-hold').addEventListener('click',function() {
 
     document.getElementById('score-'+ activePlayer).textContent = scores[activePlayer];
 
-    nextPlayer();
+
+    if (scores[activePlayer] >= 20)
+    {
+        document.querySelector('#name-'+ activePlayer).textContent = 'Winner!';
+        document.querySelector('.dice').style.display = 'none';
+    }
+    else{
+        nextPlayer();
+    }
+
+
+
+   
 
 });
 
@@ -79,3 +91,4 @@ function nextPlayer ()
 
             document.querySelector('.dice').style.display = 'none' ; 
 }
+
